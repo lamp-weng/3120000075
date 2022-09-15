@@ -8,7 +8,7 @@ import java.io.*;
  * @Description:com.Utils
  * @version:1.0
  */
-public class IOUtil {
+public class IoUtil {
     /**
      *
      * @param path 文件路径

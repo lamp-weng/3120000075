@@ -1,13 +1,13 @@
 package com.lamp;
 
-import com.Utils.IOUtil;
+import com.Utils.IoUtil;
 import com.Utils.GetSimilarityUtil;
 
 import java.io.File;
 import java.io.IOException;
 
 
-import static com.Utils.IOUtil.textToString;
+import static com.Utils.IoUtil.textToString;
 
 /**
  * @Author:lamp
@@ -19,7 +19,7 @@ public class Check {
     public static void main(String[] args) throws IOException {
 
         String originalPath = "D:/workspace/src/main/file/orig.txt";
-        String plagiarizePath = "D:/workspace/src/main/file/orig_0.8_add.txt";
+        String plagiarizePath = "D:/workspace/src/main/file/orig.txt";
         String resultPath = "D:/workspace/src/main/file/response.txt";
 
         Check d = new Check();
@@ -46,7 +46,7 @@ public class Check {
         //余弦相似度计算
         GetSimilarityUtil getSimiarityUtil = new GetSimilarityUtil(originalPath, plagiarizePath);
         System.out.println("相似度："+getSimiarityUtil.sim());
-        IOUtil.StringToFile(resStr, oriStr + "\n" + plagStr + "\n"
+        IoUtil.StringToFile(resStr, oriStr + "\n" + plagStr + "\n"
                 + "相似度 ：" + getSimiarityUtil.sim());
     }
 
